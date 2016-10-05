@@ -5,4 +5,4 @@ app.use(function *(){
     this.body = 'Hello from koajs';
 });
 
-app.listen(3000);  
+app.listen(3001);  
