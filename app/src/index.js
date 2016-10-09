@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import Normalize from 'normalize.css';
 import App from './App';
-import './index.css';
+
+
+injectTapEventPlugin();
 
 ReactDOM.render(
   <App />,
