@@ -1,8 +1,10 @@
-const koa = require('koa');  
+const koa = require('koa');
+const bodyParser = require('koa-body');
+const logger = require('koa-logger');
+
 const app = koa();
 
-app.use(function *(){  
-    this.body = 'Hello from koajs';
-});
+app.use(logger());
+app.use(bodyParser());
 
-app.listen(3001);  
+app.listen(3001);

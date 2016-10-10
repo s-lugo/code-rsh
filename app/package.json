@@ -7,14 +7,18 @@
     "eslint": "^3.7.0"
   },
   "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "classnames": "^2.2.5",
+    "flexboxgrid": "^6.3.1",
     "material-ui": "^0.15.4",
+    "normalize.css": "^5.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-flexbox-grid": "^0.10.2",
     "react-redux": "^4.4.5",
     "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0",
-    "normalize.css": "^5.0.0"
+    "redux-thunk": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
