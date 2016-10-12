@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Leaderboards = () => (
-    <h1>A</h1>
+    <div>
+    </div>
 );
 
 export default Leaderboards;
