@@ -1,8 +1,19 @@
 import React from 'react';
 import LandingBanner from '../components/LandingBanner.js';
 import Features from '../components/Features.js';
-import AvailableLanguages from '../components/AvailableLanguages.js';
+import AvailableLanguages from '../containers/AvailableLanguages.js';
 import Footer from '../components/Footer.js';
+
+const styles = {
+    infoSection: {
+        backgroundColor: '#F0F2F3',
+    },
+    divider: {
+        backgroundColor: '#9E9E9E',
+        margin: 0,
+        border: 0,
+    }
+}
 
 const Landing = () => (
     <div>
@@ -10,13 +21,13 @@ const Landing = () => (
             <LandingBanner />
         </section>
 
-        <section>
+        <section style={styles.infoSection}>
             <Features />
         </section>
 
-        <hr/>
+        <hr style={styles.divider} />
 
-        <section>
+        <section style={styles.infoSection}>
             <AvailableLanguages />
         </section>
 
@@ -27,3 +38,6 @@ const Landing = () => (
 );
 
 export default Landing;
+
+
+

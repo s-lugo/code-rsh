@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Layout, Header, Navigation, Content, Button } from 'react-mdl';
 import { Link } from 'react-router';
@@ -13,6 +14,7 @@ const styles = {
         height: '60px',
         width: '200px',
         fontSize: '18px',
+        backgroundColor: '#0070D3',
     },
     h1:{
         color:'white',
@@ -22,7 +24,7 @@ const styles = {
         fontSize:'24px',
     },
     hr:{
-        backgroundColor: 'rgb(63,81,181)',
+        backgroundColor: '#0070D3',
         height: '3px',
         width: '30%',
         margin: '25px auto',
@@ -52,4 +54,7 @@ const LandingBanner = () => (
 );
 
 export default LandingBanner;
+
+
+
 
