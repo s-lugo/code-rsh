@@ -9,12 +9,17 @@ const Landing = () => (
         <section>
             <LandingBanner />
         </section>
+
         <section>
             <Features />
         </section>
+
+        <hr/>
+
         <section>
             <AvailableLanguages />
         </section>
+
         <section>
             <Footer />
         </section>
