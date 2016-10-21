@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import LandingBanner from '../components/LandingBanner.js';
 import Features from '../components/Features.js';
 import AvailableLanguages from '../containers/AvailableLanguages.js';
@@ -21,15 +22,19 @@ const Landing = () => (
             <LandingBanner />
         </section>
 
-        <section style={styles.infoSection}>
-            <Features />
-        </section>
+        <Element name="features">
+            <section style={styles.infoSection}>
+                <Features />
+            </section>
+        </Element>
 
         <hr style={styles.divider} />
 
-        <section style={styles.infoSection}>
-            <AvailableLanguages />
-        </section>
+        <Element name="languages">
+            <section style={styles.infoSection}>
+                <AvailableLanguages />
+            </section>
+        </Element>
 
         <section>
             <Footer />

@@ -2,12 +2,16 @@
 import React from 'react';
 import { Layout, Header, Navigation, Content, Button } from 'react-mdl';
 import { Link } from 'react-router';
+import Scroll from 'react-scroll';
 import backgroundImage from '../assets/img/landing-background.jpg';
+
+const ScollerLink = Scroll.Link;
 
 const styles = {
     navLink:{
         fontWeight: 500,
         fontSize: '16px',
+        cursor: 'pointer',
     },
     mainButton:{
         marginTop: '2%',
@@ -37,8 +41,8 @@ const LandingBanner = () => (
         <Layout style={{background: `url(${backgroundImage}) center / cover`}}>
             <Header transparent title="!" >
                 <Navigation >
-                    <Link to="#" style={styles.navLink}>Features</Link>
-                    <Link to="#" style={styles.navLink}>Available Languages</Link>
+                    <ScollerLink to="features"  smooth={true} offset={50} duration={500} style={styles.navLink}>Features</ScollerLink>
+                    <ScollerLink to="languages" smooth={true} offset={50} duration={500} style={styles.navLink}>Available Languages</ScollerLink>
                     <Link to="#" style={styles.navLink}>Log In</Link>
                     <Link to="#" style={styles.navLink}>Sign Up</Link>
                 </Navigation>
