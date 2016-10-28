@@ -1,0 +1,49 @@
+{
+    "languages":[
+        {
+            "name": "Javascript",
+            "description": "Dynamic computer programming language. Most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user.",
+            "courses":[
+
+            ]
+        },
+        {
+            "name": "Ruby",
+            "description": "Dynamic, reflective, object-oriented, general-purpose programming language. Designed for programmer productivity and fun, following the principles of good user interface design.",
+            "courses":[
+
+            ]
+        },
+        {
+            "name": "Python",
+            "description": "Widely used general-purpose, high-level programming language.Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in just a few lines.",
+            "courses":[
+
+            ]
+        },
+        {
+            "name": "Java",
+            "description": "Concurrent, and object-oriented,specifically designed to have as few implementation dependencies as possible, 'write once, run anywhere'.",
+            "courses":[
+
+            ]
+        },
+        {
+            "name": "C#",
+            "description": "C# is an elegant and type-safe object-oriented language that enables developers to build a variety of secure and robust applications that run on the .NET Framework.",
+            "courses":[
+
+            ]
+        },
+        {
+            "name": "Haskell",
+            "description": "Haskell is a purely functional programming language, with non-strict semantics and strong static typing.",
+            "courses":[
+
+            ]
+        }
+    ],
+    "achievements":[
+
+    ]
+}
