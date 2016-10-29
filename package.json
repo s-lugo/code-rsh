@@ -23,8 +23,8 @@
   },
   "scripts": {
     "start": "nf start -p 3000",
-    "server": "node server.js",
-    "build": "babel-node db/initialize.js"
+    "server": "babel-node server.js",
+    "initialize-db": "babel-node db/initialize.js"
   },
   "proxy": "http://localhost:3001"
 }
