@@ -1,5 +1,5 @@
 {
-    "languages":[
+    "language":[
         {
             "name": "Javascript",
             "description": "Dynamic computer programming language. Most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user.",
@@ -43,7 +43,7 @@
             ]
         }
     ],
-    "achievements":[
+    "achievement":[
 
     ]
 }
