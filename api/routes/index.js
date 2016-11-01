@@ -2,9 +2,11 @@ const compose = require('koa-compose');
 const userRouter = require('./users.js');
 const languageRouter = require('./languages.js');
 
-const router = compose([
-    userRouter,
-    languageRouter,
-]);
-
-export default router;
+module.exports = function(db){
+    return compose([
+        languageRouter(db).routes(),
+        languageRouter(db).allowedMethods(),
+        userRouter(db).routes(),
+        userRouter(db).allowedMethods(),
+    ]);
+};
