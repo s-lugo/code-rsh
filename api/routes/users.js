@@ -1,12 +1,12 @@
 const router = require('koa-router')();
+const userSchema = require('../../db/models/language');
 
-module.exports = function(db){
-    router
-        .get('/api/users', function* (){
-            
-        })
-        .get('/api/users/:id', function* (){
+router
+    .get('/api/users', function* (){
+        
+    })
+    .get('/api/users/:id', function* (){
 
-        });
-    return router;
-};
+    });
+    
+module.exports = router;

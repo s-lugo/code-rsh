@@ -12,6 +12,6 @@ const app = koa();
 
 app.use(logger());
 app.use(bodyParser());
-app.use(router(db));
+app.use(router);
 
 app.listen(3001);
