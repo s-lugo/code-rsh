@@ -1,6 +1,6 @@
 const bodyParser = require('koa-body');
 const logger = require('koa-logger');
-const router = require('./db/routes/routes.js');
+const router = require('./api/routes/index.js');
 const koa = require('koa');
 
 require('dotenv').config();
