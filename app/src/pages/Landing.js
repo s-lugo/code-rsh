@@ -2,7 +2,7 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import LandingBanner from '../components/LandingBanner.js';
 import Features from '../components/Features.js';
-import AvailableLanguages from '../containers/AvailableLanguages.js';
+import LanguagesPreview from '../components/LanguagesPreview.js';
 import Footer from '../components/Footer.js';
 
 const styles = {
@@ -32,7 +32,7 @@ const Landing = () => (
 
         <Element name="languages">
             <section style={styles.infoSection}>
-                <AvailableLanguages />
+                <LanguagesPreview />
             </section>
         </Element>
 
