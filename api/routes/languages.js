@@ -6,7 +6,7 @@ const Language = mongoose.model('Language', languageSchema);
 
 router
     .get('/api/languages', function* (){
-        const languages = yield Language.find({});
+        const languages = yield Language.find({}, 'name description -_id');
         this.response.body = languages;
     })
     .get('/api/languages/:id', function* (){
