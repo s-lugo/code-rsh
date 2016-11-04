@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const languageSchema = mongoose.Schema({
 	name: String,
-	description: String,
 	courses: [
 		{
 			name: String,
