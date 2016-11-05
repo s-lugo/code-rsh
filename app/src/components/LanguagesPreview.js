@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {Grid, Cell} from 'react-mdl';
+import React, { Component } from 'react';
+import { Grid, Cell } from 'react-mdl';
+import Logos from '../assets/img/index.js';
 
 class LanguagesList extends Component {
 	constructor(props) {
@@ -19,12 +20,14 @@ class LanguagesList extends Component {
             <Cell col={12} style={{textAlign: 'center'}} >
                 <h2> Practice in your favorite languages </h2>
             </Cell>
-            {this.state.languages.map( language => <span>{language.name}</span>)}
+            {this.state.languages.map( language => 
+				<Cell col={4} style={{textAlign: 'center'}} key={language.name}>
+					<img src={Logos[`${language.name}-logo`]} alt={`${language.name} Logo`} />
+				</Cell>
+			)}
         </Grid>
     </div>
 	}
 }
 
 export default LanguagesList;
-
-
