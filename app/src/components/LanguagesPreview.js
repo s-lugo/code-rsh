@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import Logos from '../assets/img/index.js';
 
+let styles = {
+	img:{
+		width:'40%',
+		paddingTop:'15px',
+	}
+}
+
 class LanguagesList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			languages: [],
+			languages: []
 		};
 	}
 	componentDidMount(){
@@ -22,7 +29,7 @@ class LanguagesList extends Component {
             </Cell>
             {this.state.languages.map( language => 
 				<Cell col={4} style={{textAlign: 'center'}} key={language.name}>
-					<img src={Logos[`${language.name}-logo`]} alt={`${language.name} Logo`} />
+					<img style={styles.img} src={Logos[`${language.name}-logo`]} alt={`${language.name} Logo`} />
 				</Cell>
 			)}
         </Grid>
