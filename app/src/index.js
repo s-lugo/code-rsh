@@ -6,7 +6,6 @@ import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import App from './App';
 
-
 injectTapEventPlugin();
 
 ReactDOM.render(

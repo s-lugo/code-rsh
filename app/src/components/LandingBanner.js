@@ -12,13 +12,14 @@ const styles = {
         fontWeight: 500,
         fontSize: '16px',
         cursor: 'pointer',
+        textDecoration:'none',
     },
     mainButton:{
         marginTop: '2%',
-        height: '60px',
         width: '200px',
         fontSize: '18px',
         backgroundColor: '#0070D3',
+        padding: '10px',
     },
     h1:{
         color:'white',
@@ -43,7 +44,7 @@ const LandingBanner = () => (
                 <Navigation >
                     <ScollerLink to="features"  smooth={true} offset={50} duration={500} style={styles.navLink}>Features</ScollerLink>
                     <ScollerLink to="languages" smooth={true} offset={50} duration={500} style={styles.navLink}>Available Languages</ScollerLink>
-                    <Link to="#" style={styles.navLink}>Log In</Link>
+                    <Link to="login" style={styles.navLink}>Log In</Link>
                     <Link to="#" style={styles.navLink}>Sign Up</Link>
                 </Navigation>
             </Header>
@@ -51,7 +52,7 @@ const LandingBanner = () => (
                 <h1 style={styles.h1}>CodeFast</h1>
                 <hr style={styles.hr}/>
                 <p style={styles.p}>Practice your coding speed and battle against your friends!</p>
-                <Button raised primary ripple style={styles.mainButton}>GET STARTED</Button>
+                <Button raised primary ripple style={styles.mainButton} component={Link} to="home"> GET STARTED </Button>
             </Content>
         </Layout>
     </div>

@@ -5,7 +5,7 @@ import {Grid, Cell } from 'react-mdl';
 const styles = {
     p: {
         maxWidth: '300px',
-        fontSize: '14px',
+        fontSize: '16px',
         margin: '0 auto',
     },
     icon: {
