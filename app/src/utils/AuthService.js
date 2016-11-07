@@ -2,8 +2,13 @@ import Auth0Lock from 'auth0-lock';
 
 export default class AuthService {
   constructor(clientId, domain) {
-    // Configure Auth0
-    this.lock = new Auth0Lock(clientId, domain, {});
+    const options = {
+      closable: false,
+      theme: {
+        primaryColor: 'rgb(0, 112, 211)',
+      }
+    };
+    this.lock = new Auth0Lock(clientId, domain, options);
     // Add callback for lock `authenticated` event
     this.lock.on('authenticated', this._doAuthentication.bind(this));
     // binds login functions to keep this context

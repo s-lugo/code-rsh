@@ -45,7 +45,6 @@ const LandingBanner = () => (
                     <ScollerLink to="features"  smooth={true} offset={50} duration={500} style={styles.navLink}>Features</ScollerLink>
                     <ScollerLink to="languages" smooth={true} offset={50} duration={500} style={styles.navLink}>Available Languages</ScollerLink>
                     <Link to="login" style={styles.navLink}>Log In</Link>
-                    <Link to="#" style={styles.navLink}>Sign Up</Link>
                 </Navigation>
             </Header>
             <Content style={{textAlign:'center', marginTop:'5%'}}>

@@ -3,10 +3,9 @@ import AuthService from '../utils/AuthService';
 
 const Login = (props) => {
     const { auth } = props;
+    auth.login();
     return (
         <div >
-            <h2>Login</h2>
-            <button onClick={auth.login}>Login</button>
         </div>
     )
 }
