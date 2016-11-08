@@ -20,6 +20,18 @@ export default class AuthService {
     this.setToken(authResult.idToken);
   }
 
+  getProfile(){
+    const token = this.getToken();
+    return new Promise((resolve,reject) => {
+      this.lock.getProfile(token, function(err,profile){
+        if(err){
+          reject(err);
+        }
+        return resolve(profile);
+      });
+    });
+  }
+
   login() {
     // Call the show method to display the widget.
     this.lock.show();
