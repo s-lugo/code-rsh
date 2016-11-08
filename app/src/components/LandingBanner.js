@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Layout, Header, Navigation, Content, Button } from 'react-mdl';
 import { Link } from 'react-router';
@@ -51,14 +50,10 @@ const LandingBanner = () => (
                 <h1 style={styles.h1}>CodeFast</h1>
                 <hr style={styles.hr}/>
                 <p style={styles.p}>Practice your coding speed and battle against your friends!</p>
-                <Button raised primary ripple style={styles.mainButton} component={Link} to="home"> GET STARTED </Button>
+                <Button raised primary ripple style={styles.mainButton} component={Link} to="practice"> GET STARTED </Button>
             </Content>
         </Layout>
     </div>
 );
 
 export default LandingBanner;
-
-
-
-
