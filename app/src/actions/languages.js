@@ -1,4 +1,4 @@
-const LANGUAGES = {
+export const LANGUAGES = {
     FETCH_START: 'LANGUAGES.FETCH_START',
     FETCH_SUCCESS: 'LANGUAGES.FETCH_SUCCESS',
     FETCH_FAILED: 'LANGUAGES.FETCH_FAILED',
@@ -7,7 +7,10 @@ const LANGUAGES = {
 export function fetchLanguages(){
     return function(dispatch, getState) {
         dispatch({ type: LANGUAGES.FETCH_START });
+       
+        return fetch('/api/languages')
+            .then((res) => res.json())
+			.then((languages) => dispatch({ type: LANGUAGES.FETCH_SUCCESS, languages }))
+			.catch((errors) => dispatch({ type: LANGUAGES.FETCH_FAILED, errors }));
     };
 }
-
-export default LANGUAGES;
