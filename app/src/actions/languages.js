@@ -8,9 +8,14 @@ export const LANGUAGES = {
 export function fetchLanguages(){
     return function(dispatch, getState) {
         dispatch({ type: LANGUAGES.FETCH_START });
+        dispatch(showLoading());
         return fetch('/api/languages')
             .then((res) => res.json())
-			.then((languages) => dispatch({ type: LANGUAGES.FETCH_SUCCESS, languages }))
+			.then((languages) => {
+                dispatch({ type: LANGUAGES.FETCH_SUCCESS, languages });
+                dispatch(hideLoading());
+                }
+            )
 			.catch((errors) => dispatch({ type: LANGUAGES.FETCH_FAILED, errors }));
     };
 }
