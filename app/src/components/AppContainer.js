@@ -1,4 +1,5 @@
 import React from 'react';
+import LoadingBar from 'react-redux-loading-bar';
 
 const AppContainer = (props) => {
     let children = null;
@@ -7,7 +8,12 @@ const AppContainer = (props) => {
             auth: props.route.auth,
         })
     }
-    return <div> {children} </div>;
+    return (
+        <div>
+            <LoadingBar />
+            {children}
+        </div>
+    );
 };
 
 export default AppContainer;

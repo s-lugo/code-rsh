@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText, CardActions, CardMenu, Button, Grid, Cell } from 'react-mdl';
 
+
 class LanguagesList extends Component{
     constructor(props){
         super(props);
@@ -15,7 +16,11 @@ class LanguagesList extends Component{
     }
 
     render(){
-        return <div></div>;
+        return (
+            <div>
+                
+            </div>
+        );
     }
 }
 
