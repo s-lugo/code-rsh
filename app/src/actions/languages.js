@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from 'react-redux-loading-bar';
 export const LANGUAGES = {
     FETCH_START: 'LANGUAGES.FETCH_START',
     FETCH_SUCCESS: 'LANGUAGES.FETCH_SUCCESS',
@@ -7,7 +8,6 @@ export const LANGUAGES = {
 export function fetchLanguages(){
     return function(dispatch, getState) {
         dispatch({ type: LANGUAGES.FETCH_START });
-       
         return fetch('/api/languages')
             .then((res) => res.json())
 			.then((languages) => dispatch({ type: LANGUAGES.FETCH_SUCCESS, languages }))

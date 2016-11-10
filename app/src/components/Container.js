@@ -11,7 +11,7 @@ const Container = (props) => {
     }
 	return <div>
 		<NavBar />
-		{children}
+			{children}
 		<Footer />
 	</div>
 };

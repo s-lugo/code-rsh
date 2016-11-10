@@ -4,7 +4,7 @@ import FastApp from '../reducers/rootReducer.js';
 
 const store = createStore(
 	FastApp,
-	applyMiddleware(ReduxThunk)
+	applyMiddleware(ReduxThunk),
 );
 
 export default store;

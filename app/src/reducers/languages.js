@@ -2,7 +2,7 @@ import { LANGUAGES } from '../actions/languages.js';
 
 const initialState = {
     isLoading: false,
-    languages: [
+    list: [
 
     ],
 }
@@ -10,17 +10,14 @@ const initialState = {
 function languages( state = initialState, action) {
     switch(action.type) {
         case LANGUAGES.FETCH_START:
-            console.log("FETCHING LANGUAGES...");
             return {
                 ...state,
                 isLoading: true,
             }
         case LANGUAGES.FETCH_SUCCESS:
-            console.log("FETCHED");
-            console.log(action.languages);
             return {
                 ...state,
-                languages: action.languages,
+                list: action.languages,
                 isLoading: false,
             }
         case LANGUAGES.FETCH_FAILED:
