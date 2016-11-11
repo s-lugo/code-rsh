@@ -4,7 +4,7 @@ import Language from './Language.js';
 
 class LanguagesList extends Component{
     constructor(props){
-        super(props); 
+        super(props);
     }
 
     componentDidMount(){
@@ -14,7 +14,7 @@ class LanguagesList extends Component{
     renderLanguages(){
         return this.props.languages.map((language)=> (
             <Cell col={6} key={language.name}>
-                <Language {...language} />
+                <Language {...language} selectLanguage={this.props.actions.selectLanguage} />
             </Cell>
         ));
     }

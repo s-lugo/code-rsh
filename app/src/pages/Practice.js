@@ -1,12 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import AvailableLanguages from '../containers/AvailableLanguages.js';
+import LanguageCourses from '../containers/LanguageCourses.js';
 
-const Practice = () => {
+let Practice = (props) => {
     return (
     <div style={{margin: '0 auto', padding: '40px 0px', textAlign: 'center'}}>
-        <AvailableLanguages />
+        { props.selectedLanguage ? <LanguageCourses /> : <AvailableLanguages /> }
     </div>
     );
 }
+const mapStateToProps = ({languages}) => ({
+    selectedLanguage: languages.selected,
+});
+
+Practice = connect(
+    mapStateToProps
+)(Practice);
 
 export default Practice;

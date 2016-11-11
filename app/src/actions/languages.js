@@ -3,6 +3,7 @@ export const LANGUAGES = {
     FETCH_START: 'LANGUAGES.FETCH_START',
     FETCH_SUCCESS: 'LANGUAGES.FETCH_SUCCESS',
     FETCH_FAILED: 'LANGUAGES.FETCH_FAILED',
+    SELECT_LANGUAGE: 'LANGUAGES.SELECT_LANGUAGE',
 }
 
 export function fetchLanguages(){
@@ -18,4 +19,8 @@ export function fetchLanguages(){
             )
 			.catch((errors) => dispatch({ type: LANGUAGES.FETCH_FAILED, errors }));
     };
+}
+
+export function selectLanguage(language) {
+    return { type: LANGUAGES.SELECT_LANGUAGE, language };
 }

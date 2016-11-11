@@ -2,6 +2,7 @@ import { LANGUAGES } from '../actions/languages.js';
 
 const initialState = {
     isLoading: false,
+    selected: null,
     list: [
 
     ],
@@ -24,6 +25,11 @@ function languages( state = initialState, action) {
             return {
                 ...state,
                 isLoading: false,
+            }
+        case LANGUAGES.SELECT_LANGUAGE:
+            return {
+                ...state,
+                selected: action.language,
             }
         default:
             return state;
