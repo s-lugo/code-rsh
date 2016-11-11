@@ -24,7 +24,7 @@ const routes = (
 			<Route path="login" component={Login} />
 			<Route component={Container} onEnter={requireAuth}>
 				<Route path="home" component={Home} />
-				<Route path="practice" component={Practice} />
+				<Route path="practice(/:language)" component={Practice} />
 				<Route path="leaderboards" component={Leaderboards} />
 				<Route path="profile" component={Profile} />
 			</Route>
