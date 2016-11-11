@@ -11,4 +11,4 @@ const languageSchema = mongoose.Schema({
 	],
 });
 
-export default languageSchema;
+module.exports = languageSchema;

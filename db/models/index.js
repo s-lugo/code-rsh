@@ -1,10 +1,10 @@
-import userSchema from './user.js';
-import languageSchema from './language.js';
-import achievementSchema from './achievement.js';
+const userSchema = require('./user.js');
+const languageSchema = require('./language.js');
+const achievementSchema = require('./achievement.js');
 
 const mongoose = require('mongoose');
 
-export default {
+module.exports = {
     user: userSchema,
     language: languageSchema,
     achievement: achievementSchema,

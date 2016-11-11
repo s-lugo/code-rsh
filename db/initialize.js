@@ -1,8 +1,8 @@
-import schemas from './models/index.js';
-
-require('dotenv').config();
+const schemas = require('./models/index.js');
 const mongoose = require('mongoose');
 const initialData = require('./seed.json');
+
+require('dotenv').config();
 
 mongoose.connect(process.env.DATABASE_URL);
 

@@ -6,4 +6,4 @@ const achievementSchema = mongoose.Schema({
 	image: String,
 });
 
-export default achievementSchema;
+module.exports = achievementSchema;
