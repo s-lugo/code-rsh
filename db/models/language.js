@@ -5,7 +5,7 @@ const languageSchema = mongoose.Schema({
 	courses: [
 		{
 			name: String,
-			description: String,
+			text: String,
 			difficulty: Number,
 		},
 	],
