@@ -1,21 +1,22 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import AvailableLanguages from '../containers/AvailableLanguages.js';
-import LanguageCourses from '../containers/LanguageCourses.js';
+import React, { Component } from 'react';
+import LanguagesList from '../components/LanguagesList.js';
+import CoursesList from '../components/CoursesList.js';
 
-let Practice = (props) => {
-    return (
-    <div style={{margin: '0 auto', padding: '40px 0px', textAlign: 'center'}}>
-        { props.selectedLanguage ? <LanguageCourses /> : <AvailableLanguages /> }
-    </div>
-    );
+class Practice extends Component{
+    constructor(props){
+        super(props);
+    }
+    componentDidMount(){
+        this.props.actions.fetchLanguages();
+    }
+    render(){
+        return (
+            <div style={{margin: '0 auto', padding: '40px 0px', textAlign: 'center'}}>
+               { this.props.routeParams.language ? <CoursesList selectedLanguage={this.props.routeParams.language} languages={this.props.languages} /> :
+               <LanguagesList languages={this.props.languages} selectLanguage={this.props.actions.fetchLanguages} /> }
+            </div>
+        );
+    }
 }
-const mapStateToProps = ({languages}) => ({
-    selectedLanguage: languages.selected,
-});
-
-Practice = connect(
-    mapStateToProps
-)(Practice);
 
 export default Practice;
