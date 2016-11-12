@@ -23,7 +23,7 @@ const Language = (props) => {
             <img style={styles.logo} src={Logos[`${props.name}-logo`]} />
         </div>
         <CardText>
-            <span>0/10 Courses Completed</span>
+            <span>{`0/${props.courses.length} Courses Completed`}</span>
         </CardText>
         <CardActions border>
             <Button colored onClick={()=>props.selectLanguage(props.name)}><Link to={`/practice/${props.name}`} style={styles.link}>Select {props.name}</Link></Button>

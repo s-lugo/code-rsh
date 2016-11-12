@@ -4,10 +4,11 @@ export const LANGUAGES = {
     FETCH_SUCCESS: 'LANGUAGES.FETCH_SUCCESS',
     FETCH_FAILED: 'LANGUAGES.FETCH_FAILED',
     SELECT_LANGUAGE: 'LANGUAGES.SELECT_LANGUAGE',
+    RESET_LANGUAGE: 'LANGUAGES.RESET_LANGUAGE',
 }
 
-export function fetchLanguages(){
-    return function(dispatch, getState) {
+export function fetchLanguages() {
+    return function(dispatch) {
         dispatch({ type: LANGUAGES.FETCH_START });
         dispatch(showLoading());
         return fetch('/api/languages')
@@ -23,4 +24,8 @@ export function fetchLanguages(){
 
 export function selectLanguage(language) {
     return { type: LANGUAGES.SELECT_LANGUAGE, language };
+}
+
+export function resetLanguage() {
+    return { type: LANGUAGES.RESET_LANGUAGE, language: null };
 }
