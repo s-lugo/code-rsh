@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Cell } from 'react-mdl';
 import Course from './Course.js';
+import CourseBanner from './CourseBanner.js'
 
 function renderCourses(courses, selectCourse){
     return courses.map( (course) =>{
@@ -17,6 +18,7 @@ const CoursesList = (props) => {
     const courses = props.languages.filter((lang) => lang.name == props.selectedLanguage)[0].courses;
     return (
     <div style={{ width: '70%', margin: '0 auto' }}>
+            <CourseBanner language={props.selectedLanguage} />
             <Grid>
                 {renderCourses(props.languages, props.selectLanguage)}
             </Grid>
