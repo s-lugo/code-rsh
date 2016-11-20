@@ -1,12 +1,15 @@
 import React from 'react';
-import { Card, CardTitle, CardText, CardActions, CardMenu, Button } from 'react-mdl';
+import { Card, CardTitle, CardText, CardActions, CardMenu, Button, ProgressBar } from 'react-mdl';
 import { Link } from 'react-router';
 import Logos from '../assets/img/index.js';
 
 let styles = {
     logo:{
-        width: '170px',
-        height: '170px',
+        width: '150px',
+        height: '150px',
+    },
+    span:{
+        fontSize: '20px',
     },
     link:{
         fontWeight: 500,
@@ -23,7 +26,8 @@ const Language = (props) => {
             <img style={styles.logo} src={Logos[`${props.name}-logo`]} />
         </div>
         <CardText>
-            <span>{`0/${props.courses.length} Courses Completed`}</span>
+            <span style={styles.span}>{`0/${props.courses.length} Courses Completed`}</span>
+            <ProgressBar progress={44} />
         </CardText>
         <CardActions border>
             <Button colored onClick={()=>props.selectLanguage(props.name)}><Link to={`/practice/${props.name}`} style={styles.link}>Select {props.name}</Link></Button>

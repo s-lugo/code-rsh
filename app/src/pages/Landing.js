@@ -6,14 +6,12 @@ import LanguagesPreview from '../components/LanguagesPreview.js';
 import Footer from '../components/Footer.js';
 
 const styles = {
-    infoSection: {
+    infoSectionOne: {
+        backgroundColor: 'white',
+    },
+    infoSectionTwo: {
         backgroundColor: '#F0F2F3',
     },
-    divider: {
-        backgroundColor: '#9E9E9E',
-        margin: 0,
-        border: 0,
-    }
 }
 
 const Landing = () => (
@@ -23,15 +21,13 @@ const Landing = () => (
         </section>
 
         <Element name="features">
-            <section style={styles.infoSection}>
+            <section style={styles.infoSectionOne}>
                 <Features />
             </section>
         </Element>
 
-        <hr style={styles.divider} />
-
         <Element name="languages">
-            <section style={styles.infoSection}>
+            <section style={styles.infoSectionTwo}>
                 <LanguagesPreview />
             </section>
         </Element>

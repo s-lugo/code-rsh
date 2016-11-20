@@ -7,6 +7,7 @@ const styles = {
         maxWidth: '300px',
         fontSize: '16px',
         margin: '0 auto',
+        color: '#4D5966',
     },
     icon: {
         fontSize: '100px',
@@ -24,6 +25,7 @@ const styles = {
 const Features = () => (
     <div style={{ width: '70%', margin: '0 auto', padding: '80px 0px' }}>
         <Grid>
+            <Cell col={12}><h1 style={{textAlign:'center', margin: 0, padding: '20px'}}> Discover multiple tools that will aid you in your path </h1></Cell>
             <Cell col={6} style={styles.column}>
                 <i className="material-icons" style={styles.icon}>people</i>
                 <i className="material-icons" style={styles.icon}>laptop</i>
@@ -44,7 +46,7 @@ const Features = () => (
             </Cell>
             <Cell col={6} style={styles.column}>
                 <i className="material-icons" style={styles.icon}>grade</i>
-                <h3>Achieve greatness</h3>
+                <h3>Compete in the leaderboards</h3>
                 <p style={styles.p}>See how well you fare against other coders in our leaderboards for each of the different languages and courses.</p>
             </Cell>
         </Grid>
