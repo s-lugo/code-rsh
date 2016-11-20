@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Header, Navigation, ListItemContent, IconButton, Menu, MenuItem } from 'react-mdl';
+import Logo from '../assets/img/logo_test.png';
 
 let styles = {
     link: {
@@ -11,7 +12,7 @@ let styles = {
 
 const NavBar = (props) => {
     return <div >
-        <Header title="CodeFast" scroll>
+        <Header title={<img src={Logo} style={{height:"50px"}}/>} scroll>
             <Navigation style={{textAlign:"left"}}>
                 <Link to="practice">Practice</Link>
                 <Link to="leaderboards">Leaderboards</Link>
