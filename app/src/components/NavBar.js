@@ -12,10 +12,10 @@ let styles = {
 
 const NavBar = (props) => {
     return <div >
-        <Header title={<img src={Logo} style={{height:"50px"}}/>} scroll>
-            <Navigation style={{textAlign:"left"}}>
-                <Link to="practice">Practice</Link>
-                <Link to="leaderboards">Leaderboards</Link>
+        <Header title={<Link to="/practice"><img src={Logo} style={{height:"40px"}}/></Link>} scroll>
+            <Navigation>
+                <Link to="practice">PRACTICE</Link>
+                <Link to="leaderboards">LEADERBOARDS</Link>
             </Navigation>
 
             <Navigation>
