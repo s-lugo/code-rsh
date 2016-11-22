@@ -5,9 +5,10 @@ import CourseBanner from './CourseBanner.js'
 
 function renderCourses(courses, selectCourse){
     return courses.map( (course) =>{
-        <Cell col={4}>
-            <Course {...course} selectCourse={selectCourse} />
-        </Cell>
+        return (<Cell key={course.name} col={4}>
+                    <Course {...course} selectCourse={selectCourse} />
+                </Cell>
+        );
     });
 }
 
@@ -20,7 +21,7 @@ const CoursesList = (props) => {
     <div style={{ width: '70%', margin: '0 auto' }}>
             <CourseBanner language={props.selectedLanguage} />
             <Grid>
-                {renderCourses(props.languages, props.selectLanguage)}
+                {renderCourses(courses, props.selectLanguage)}
             </Grid>
     </div>);
 };
