@@ -3,27 +3,34 @@ import { Grid, Cell } from 'react-mdl';
 import Course from './Course.js';
 import CourseBanner from './CourseBanner.js'
 
-function renderCourses(courses, selectCourse){
-    return courses.map( (course) =>{
-        return (<Cell key={course.name} col={4}>
-                    <Course {...course} selectCourse={selectCourse} />
-                </Cell>
-        );
-    });
-}
-
-const CoursesList = (props) => {
-    if( !props.languages.length ){
-        return <div></div>;
+class CoursesList extends Component{
+    constructor(props){
+        super(props);
     }
-    const courses = props.languages.filter((lang) => lang.name == props.selectedLanguage)[0].courses;
-    return (
-    <div style={{ width: '70%', margin: '0 auto' }}>
-            <CourseBanner language={props.selectedLanguage} />
-            <Grid>
-                {renderCourses(courses, props.selectLanguage)}
-            </Grid>
-    </div>);
+    componentDidMount(){
+        this.props.languageActions.fetchLanguages();
+    }
+    renderCourses(courses){
+        return courses.map( (course) =>{
+            return (<Cell key={course.name} col={4}>
+                        <Course course={{...course}} selectCourse={this.props.courseActions.selectCourse} />
+                    </Cell>
+            );
+        });
+    }
+    render(){
+        if( !props.languages.length ){
+            return <div></div>;
+        }
+        const courses = this.props.languages.filter((lang) => lang.name == this.props.selectedLanguage)[0].courses;
+        return (
+        <div style={{ width: '70%', margin: '0 auto' }}>
+                <CourseBanner language={this.props.selectedLanguage} />
+                <Grid>
+                    {renderCourses(courses, this.props.courseActions.selectCourse)}
+                </Grid>
+        </div>);
+    }
 };
 
 export default CoursesList;

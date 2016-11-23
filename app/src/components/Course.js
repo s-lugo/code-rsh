@@ -22,27 +22,28 @@ let styles = {
 }
 
 const Course = (props) => {
+    //console.log(props);
     return (
         <Card shadow={0} style={{margin: 'auto' }}>
             <CardTitle expand 
-                style={{color: '#fff', cursor: 'pointer', backgroundColor: props.completed ? "#8BC34A" : "#EF5350"}} 
-                onClick={()=>console.log('yeah')}
+                style={{color: '#fff', cursor: 'pointer', backgroundColor: props.course.completed ? "#8BC34A" : "#EF5350"}} 
+                onClick={()=>props.selectCourse(props.course)}
             >
-                {props.name}
+                {props.course.name}
             </CardTitle>
             <CardMenu>
                 <Icon name="star" 
-                      style={{color: props.favorite ? 'yellow' : 'grey' , cursor: 'pointer'}} 
+                      style={{color: props.course.favorite ? 'yellow' : 'grey' }} 
                       onClick={()=>console.log('DISPATCH FAVORITE COURSE')}
                 />
-                {props.completed ?  <Icon name="done" style={{color:'green'}}/> : null }
+                {props.course.completed ?  <Icon name="done" style={{color:'green'}}/> : null }
             </CardMenu>
             <CardActions border style={{textAlign: 'center'}}>
                 <span style={styles.courseStat}>
                     WPM:  <span style={styles.wpm}> -- </span>
                 </span>
                 <span style={styles.courseStat}> 
-                    Difficulty: <span style={styles.difficulty}>{props.difficulty}</span> 
+                    Difficulty: <span style={styles.difficulty}>{props.course.difficulty}</span> 
                 </span>
             </CardActions>
         </Card>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTitle, CardText, CardActions, CardMenu, Button, ProgressBar } from 'react-mdl';
+import { Card, CardTitle, CardText, CardActions, Button, ProgressBar } from 'react-mdl';
 import { Link } from 'react-router';
 import Logos from '../assets/img/index.js';
 
@@ -29,6 +29,7 @@ const backgrounds = {
 }
 
 const Language = (props) => {
+    console.log(props);
     return (
         <Card shadow={1} style={{width: '80%', margin: 'auto'}}>
             <CardTitle expand style={{color: '#fff', backgroundColor: backgrounds[props.name] }}>
@@ -37,13 +38,13 @@ const Language = (props) => {
                 </div>
             </CardTitle>
             <CardActions border>
-                <Button colored onClick={()=>props.selectLanguage(props.name)}><Link to={`/practice/${props.name}`} style={styles.link}>{props.name}</Link></Button>
+                    <Link to={`practice/${props.name}`} style={styles.link}>{props.name}</Link>
             </CardActions>
             <CardText>
                 <span style={styles.span}>{`0/${props.courses.length} Courses Completed`}</span>
                 <ProgressBar progress={44} />
             </CardText>
-        </Card> 
+        </Card>
     );
 }
 
