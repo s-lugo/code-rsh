@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema({
 	name: String,
 	achivements: [
 		{
-			_id: ObjectId,
+			achievement_id: ObjectId,
 			achieved: Date,
 		},
 	],
@@ -14,8 +14,13 @@ const userSchema = mongoose.Schema({
 			score: Number,
 			wpm: Number,
 			time: Number,
-			course: ObjectId,
+			course_id: ObjectId,
 			opponent: String,
+		},
+	],
+	favorites: [
+		{
+			course_id: ObjectId,
 		},
 	],
 });
