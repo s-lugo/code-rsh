@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import Course from './Course.js';
 import CourseBanner from './CourseBanner.js'
@@ -19,15 +19,15 @@ class CoursesList extends Component{
         });
     }
     render(){
-        if( !props.languages.length ){
+        if( !this.props.languages.length ){
             return <div></div>;
         }
-        const courses = this.props.languages.filter((lang) => lang.name == this.props.selectedLanguage)[0].courses;
+        const courses = this.props.languages.filter((lang) => lang.name == this.props.routeParams.language)[0].courses;
         return (
         <div style={{ width: '70%', margin: '0 auto' }}>
-                <CourseBanner language={this.props.selectedLanguage} />
+                <CourseBanner language={this.props.routeParams.language} />
                 <Grid>
-                    {renderCourses(courses, this.props.courseActions.selectCourse)}
+                    {this.renderCourses(courses, this.props.courseActions.selectCourse)}
                 </Grid>
         </div>);
     }

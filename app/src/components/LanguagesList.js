@@ -17,7 +17,7 @@ class LanguagesList extends Component {
         ));
     }
     render(){
-            return (
+        return (
             <div style={{ width: '70%', margin: '0 auto' }}>
                 <Grid>
                     {this.renderLanguages(this.props.languages, this.props.selectLanguage)}

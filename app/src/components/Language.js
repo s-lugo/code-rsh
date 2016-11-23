@@ -29,7 +29,6 @@ const backgrounds = {
 }
 
 const Language = (props) => {
-    console.log(props);
     return (
         <Card shadow={1} style={{width: '80%', margin: 'auto'}}>
             <CardTitle expand style={{color: '#fff', backgroundColor: backgrounds[props.name] }}>
@@ -38,7 +37,7 @@ const Language = (props) => {
                 </div>
             </CardTitle>
             <CardActions border>
-                    <Link to={`practice/${props.name}`} style={styles.link}>{props.name}</Link>
+                    <Link to={`/practice/${props.name}/`} style={styles.link}>{props.name}</Link>
             </CardActions>
             <CardText>
                 <span style={styles.span}>{`0/${props.courses.length} Courses Completed`}</span>
