@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, CardText, CardActions, Button, ProgressBar } from 'react-mdl';
-import { Link } from 'react-router';
+import { browserHistory } from 'react-router';
 import Logos from '../assets/img/index.js';
 
 let styles = {
@@ -31,14 +31,11 @@ const backgrounds = {
 const Language = (props) => {
     return (
         <Card shadow={1} style={{width: '80%', margin: 'auto'}}>
-            <CardTitle expand style={{color: '#fff', backgroundColor: backgrounds[props.name] }}>
+            <CardTitle expand style={{color: '#fff', backgroundColor: backgrounds[props.name], cursor: 'pointer' }} onClick={() => browserHistory.push(`/practice/${props.name}/`)}>
                 <div style={{margin: '0 auto'}}>
                     <img style={styles.logo} src={Logos[`${props.name}-logo`]} />
                 </div>
             </CardTitle>
-            <CardActions border>
-                    <Link to={`/practice/${props.name}/`} style={styles.link}>{props.name}</Link>
-            </CardActions>
             <CardText>
                 <span style={styles.span}>{`0/${props.courses.length} Courses Completed`}</span>
                 <ProgressBar progress={44} />
