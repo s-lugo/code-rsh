@@ -26,7 +26,7 @@ const routes = (
 			<Route component={Container} onEnter={requireAuth}>
 				<Route path="home" component={Home} />
 				<Route path="practice" component={Practice} />
-				<Route path="practice/:language" component={Home} />
+				<Route path="practice/:language" component={CoursesContainer} />
 				<Route path="leaderboards" component={Leaderboards} />
 				<Route path="profile" component={Profile} />
 			</Route>
