@@ -16,7 +16,6 @@ function languages( state = initialState, action) {
                 isLoading: true,
             }
         case LANGUAGES.FETCH_SUCCESS:
-            
             return {
                 ...state,
                 list: action.languages,
@@ -32,11 +31,8 @@ function languages( state = initialState, action) {
                 ...state,
                 selected: action.language,
             }
-        case LANGUAGES.SELECT_LANGUAGE:
-            return {
-                ...state,
-                selected: null,
-            }
+        case LANGUAGES.RESET_LANGUAGE:
+            return initialState;
         default:
             return state;
     }
