@@ -1,22 +1,23 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as LanguagesActions from '../actions/languages.js';
-import Practice from '../pages/Practice.js';
+import LanguagesList from '../components/LanguagesList.js';
 
 //Implement courses selector
 
-const mapStateToProps = (state) => ({
-    selectedLanguage: state.languages.selected,
-    languages: state.languages.list,
-});
+const mapStateToProps = (state) => {
+    return {
+        languages: state.languages.list,
+    };
+};
 
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(LanguagesActions, dispatch),
-})
+});
 
 const LanguagesContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Practice);
+)(LanguagesList);
 
 export default LanguagesContainer;
