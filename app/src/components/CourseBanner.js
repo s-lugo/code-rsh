@@ -12,7 +12,7 @@ const backgrounds = {
 
 const CourseBanner = (props) => {
     return (
-        <Card shadow={0} style={{width: '70%', margin: 'auto'}}>
+        <Card shadow={0} style={{width: '70%', margin: 'auto', margin: '15px auto'}}>
             <CardTitle expand style={{color: '#fff', backgroundColor: backgrounds[props.language] }}>{props.language}</CardTitle>
             <CardText>
                 ${"{available}"} Courses Available
