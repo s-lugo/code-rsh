@@ -3,7 +3,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const userSchema = mongoose.Schema({
 	name: String,
-	achivements: [
+	achievements: [
 		{
 			achievement_id: ObjectId,
 			achieved: Date,
