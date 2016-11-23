@@ -25,7 +25,7 @@ class CoursesList extends Component{
         const courses = this.props.languages.filter((lang) => lang.name == this.props.routeParams.language)[0].courses;
         return (
         <div style={{ width: '70%', margin: '0 auto' }}>
-                <CourseBanner language={this.props.routeParams.language} />
+                <CourseBanner language={this.props.routeParams.language} courses={courses} />
                 <Grid>
                     {this.renderCourses(courses, this.props.courseActions.selectCourse)}
                 </Grid>
