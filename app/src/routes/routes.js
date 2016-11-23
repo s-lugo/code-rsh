@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import AppContainer from '../components/AppContainer.js';
-import LanguagesContainer from '../containers/LanguagesContainer.js';
+import CoursesContainer from '../containers/CoursesContainer.js';
 import Landing from '../pages/Landing.js';
 import Home from '../pages/Home.js';
 import Profile from '../pages/Profile.js';
 import Login from '../pages/Login.js';
+import Practice from '../pages/Practice.js';
 import Leaderboards from '../pages/Leaderboards.js';
 import Container from '../components/Container.js';
 import AuthService from '../utils/AuthService.js';
@@ -24,7 +25,8 @@ const routes = (
 			<Route path="login" component={Login} />
 			<Route component={Container} onEnter={requireAuth}>
 				<Route path="home" component={Home} />
-				<Route path="practice(/:language)" component={LanguagesContainer} />
+				<Route path="practice" component={Practice} />
+				<Route path="practice/:language" component={Home} />
 				<Route path="leaderboards" component={Leaderboards} />
 				<Route path="profile" component={Profile} />
 			</Route>
